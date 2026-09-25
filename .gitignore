@@ -1,0 +1,39 @@
+# This repository is documentation-only.
+# Prevent accidental publication of common private/build artifacts.
+
+target/
+dist/
+build/
+out/
+.env
+.env.*
+*.log
+*.zip
+*.7z
+*.tar
+*.gz
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.onnx
+*.gguf
+*.bin
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Never copy the private implementation into this showcase repository.
+private/
+source/
+src/
+models/
+env/
+logs/
