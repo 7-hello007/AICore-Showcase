@@ -14,6 +14,19 @@ AICore is positioned as an **AI computer control layer** for the AI PC era. It c
 
 The product is designed for organizations seeking to differentiate personal computers through intelligence, responsiveness, efficiency, and a consistent experience across device portfolios.
 
+## Engineering overview
+
+AICore is developed as a modular Rust workspace for Windows and Linux. Its major engineering areas cover platform telemetry, workload context, application and task integration, AI-assisted prediction, policy validation, runtime coordination, platform execution, readback, rollback, memory, plugins, local communication, and user-facing operational applications.
+
+The system follows a complete control lifecycle:
+
+```text
+Observe → Understand → Predict → Decide → Validate
+        → Route → Execute → Verify → Recover → Learn
+```
+
+Platform-specific behavior is isolated from platform-neutral decision logic. AI contributes proposals and interpretation, while validated control and recovery remain deterministic. See the [high-level project structure](docs/PROJECT_STRUCTURE.md) for the public engineering view.
+
 ## The market problem
 
 Modern computers combine general-purpose processing, graphics, dedicated AI acceleration, memory, power, and thermal constraints. Each part may be capable, yet the overall experience often remains fragmented across applications, vendor utilities, and fixed operating modes.

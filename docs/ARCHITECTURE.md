@@ -8,6 +8,12 @@
 
 AICore connects three business perspectives: what the user wants to accomplish, what applications need, and how the device can best support the experience. This creates a distinct product layer for adaptive personal computing.
 
+## Adaptive control cycle
+
+![AICore adaptive control cycle](../assets/control-loop.png)
+
+AICore continuously connects observation, workload understanding, prediction, policy validation, supported execution, result measurement, recovery, and feedback. The diagram presents the product-level control model without exposing implementation details.
+
 ## Experience principles
 
 ### Understand context
