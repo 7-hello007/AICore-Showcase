@@ -1,162 +1,90 @@
+[English](README.md) | [Chinese](README.zh-CN.md)
+
 # AICore
 
-> **AI-assisted adaptive computer control layer for heterogeneous PCs**
+![AICore vision](assets/aicore-vision.png)
 
-**Status:** Proprietary engineering prototype
-**Current generation:** AICore V4 / workspace version 0.4.0
-**Primary implementation:** Rust
-**Target platforms:** Windows and Linux
-**Source availability:** Proprietary — core implementation is not publicly distributed
+## Adaptive intelligence for the next generation of personal computing
 
-AICore is an experimental computer control layer that sits conceptually between applications and operating-system / hardware resource interfaces. It combines system telemetry, workload context, application task intent, historical information, and optional local AI inference to produce **validated, observable, and reversible resource-control policies**.
+AICore is a software product designed to help computers respond more intelligently to changing user priorities, application demands, and device conditions. It creates a unified product experience across increasingly diverse computing resources and turns system complexity into clear, adaptive outcomes.
 
-AICore is not a replacement operating system, a chatbot, or a collection of fixed "PC optimization" switches. The project explores whether a local control plane can help increasingly heterogeneous computers coordinate resources around the workload that is actually being executed.
+## Product position
 
-## The problem
+AICore is positioned as an **AI computer control layer** for the AI PC era. It complements operating systems, hardware platforms, and applications by introducing a higher-level form of contextual coordination.
 
-Modern PCs increasingly combine:
+The product is designed for organizations seeking to differentiate personal computers through intelligence, responsiveness, efficiency, and a consistent experience across device portfolios.
 
-- CPU compute
-- integrated and discrete GPUs
-- NPUs and other AI accelerators
-- shared and dedicated memory
-- multiple power states
-- thermal and battery constraints
-- interactive, background, rendering, compilation, gaming, and AI workloads
+## The market problem
 
-Resource decisions are distributed across applications, operating systems, runtimes, drivers, and vendor-specific interfaces. AICore explores an additional coordination layer that can reason about workload context while preserving deterministic validation and platform control boundaries.
+Modern computers combine general-purpose processing, graphics, dedicated AI acceleration, memory, power, and thermal constraints. Each part may be capable, yet the overall experience often remains fragmented across applications, vendor utilities, and fixed operating modes.
 
-## Control model
+AICore addresses this fragmentation by giving the computer a coherent way to interpret what matters now and align the device experience around it.
 
-```mermaid
-flowchart LR
-    O[Observe] --> U[Understand]
-    U --> P[Predict]
-    P --> D[Decide]
-    D --> V[Validate]
-    V --> E[Execute]
-    E --> M[Measure / Verify]
-    M --> L[Learn]
-    L --> O
-```
+## Core value proposition
 
-AI is deliberately **not** given direct privileged control:
+- **Context-aware computing:** adapts the experience to user priorities and active workloads.
+- **Whole-device coordination:** approaches the computer as one intelligent system rather than a collection of isolated components.
+- **Cross-platform potential:** supports a broad product strategy across operating systems and hardware portfolios.
+- **Local intelligence:** creates opportunities for responsive, privacy-conscious experiences close to the user.
+- **Partner extensibility:** provides a foundation for OEM, enterprise, software, and silicon partnerships.
+- **Commercial flexibility:** can support licensing, strategic acquisition, bundled offerings, and premium services.
 
-```mermaid
-flowchart LR
-    AI[AI / Prediction Proposal] --> POLICY[Resource Policy]
-    POLICY --> VALIDATOR[Policy Validator]
-    VALIDATOR --> BIND[Capability / Runtime Binding]
-    BIND --> EXEC[Platform Executor]
-    EXEC --> READBACK[Readback / Verification]
-    READBACK --> OS[Operating System / Hardware]
-```
+## Priority markets
 
-Unsupported, stale, invalid, or failed decisions can be rejected, degraded, rolled back, or moved into a safe operating path.
+| Market | Opportunity |
+|---|---|
+| AI PC manufacturers | Differentiate devices through adaptive system intelligence |
+| OEM and device brands | Create a consistent premium experience across product lines |
+| Enterprise computing | Align device behavior with productivity, governance, and fleet priorities |
+| Creative and technical workstations | Coordinate demanding workflows around user and task priorities |
+| Software partners | Add intelligent device awareness to application experiences |
+| Silicon and platform partners | Expand the value of heterogeneous computing investments |
 
-## System position
+## Strategic value
 
-```mermaid
-flowchart TB
-    APP[Applications / User Intent]
-    TASK[Workload Context / Task Contracts]
-    CORE[AICore Control Plane]
-    OS[Operating System]
-    HW[CPU / GPU / NPU / Memory / Power]
+AICore brings together a clear product category, a transferable software asset, a differentiated market narrative, and multiple commercialization paths. It can serve as a standalone product, an OEM capability, an enterprise platform, or a strategic component within a larger AI PC portfolio.
 
-    APP --> TASK
-    TASK --> CORE
-    CORE --> OS
-    OS --> HW
-```
+For an acquirer or strategic partner, AICore offers a faster route to an integrated adaptive-computing proposition and a brand that can grow with the AI PC market.
 
-AICore does **not** replace the operating system, kernel, GPU/NPU firmware, vendor drivers, or application business logic.
+## Founder-led development
 
-## What exists in V4
+AICore is an independently conceived and developed personal project. Its product vision, software asset, documentation, brand direction, and commercialization strategy have been built as one coherent body of work under direct founder ownership.
 
-The private V4 implementation currently contains engineering work in the following areas:
+This founder-led model gives prospective buyers a clear point of accountability and a direct path to product knowledge, intellectual-property discussion, and transition planning.
 
-- adaptive runtime control loop
-- workload and context representation
-- policy generation, resolution, and validation
-- Windows and Linux platform adapters
-- process priority and CPU-affinity control paths
-- power-profile integration
-- GPU telemetry and capability-gated hardware-control primitives
-- NPU capability and routing abstractions
-- optional AI-assisted policy proposals
-- optional local LLM intent interpretation
-- application/task contracts
-- L0 / L1 / L2 compatibility tiers
-- execution readback and post-condition verification
-- rollback, degraded operation, and SafeMode concepts
-- local IPC
-- plugin architecture and trust controls
-- historical memory / persistence infrastructure
-- CLI and local telemetry dashboard
-- model mode and captured-fixture platform simulation
-- automated engineering verification infrastructure
+## Credibility signals
 
-See [Current Status](docs/CURRENT_STATUS.md) for the important distinction between implemented architecture, verified engineering behavior, and capabilities that are **not yet proven on real heterogeneous hardware**.
+- A defined product category and consistent market position
+- A substantial private software asset with versioned development history
+- A documented high-level product structure and cross-platform strategy
+- Clear principles for trust, control, privacy, and commercial stewardship
+- A bilingual public presentation prepared for international evaluation
+- A structured confidential due-diligence path for qualified parties
 
-## What AICore does not claim today
+## Commercial pathways
 
-AICore currently has **no public cross-hardware performance benchmark dataset**. This repository therefore does not claim that AICore:
+- Technology acquisition and intellectual-property transfer
+- OEM licensing and device bundling
+- Enterprise subscription and fleet offerings
+- Strategic partnerships with silicon and platform companies
+- Co-branded premium computing experiences
+- Vertical solutions for professional and specialized workloads
 
-- increases gaming FPS
-- reduces compilation time
-- improves AI inference throughput
-- extends battery life
-- reduces energy consumption
-- improves thermals
-- universally controls arbitrary GPUs or NPUs
-- replaces the Windows or Linux scheduler
+## Public showcase
 
-Real workload and cross-hardware validation is the next major stage of the project.
+- [Product overview](docs/OVERVIEW.md)
+- [Product framework](docs/ARCHITECTURE.md)
+- [High-level project structure](docs/PROJECT_STRUCTURE.md)
+- [Value capabilities](docs/CAPABILITIES.md)
+- [Commercial readiness](docs/CURRENT_STATUS.md)
+- [Acquisition and due diligence](docs/DUE_DILIGENCE.md)
+- [Growth strategy](docs/ROADMAP.md)
+- [Trust principles](docs/SAFETY_AND_CONTROL.md)
+- [Frequently asked questions](docs/FAQ.md)
+- [Market comparison](MARKET_COMPARISON.md)
 
-## Integration tiers
+## Partnership and acquisition enquiries
 
-AICore uses three independent compatibility tiers:
+For acquisition, licensing, investment, or strategic partnership discussions: **kenny98929974@gmail.com**
 
-| Tier         | Purpose                                                                             |
-| ------------ | ----------------------------------------------------------------------------------- |
-| **L0** | Transparent workload/context integration without requiring application modification |
-| **L1** | Application-provided task contracts and resource intent                             |
-| **L2** | Native AICore task submission, query, and cancellation interfaces                   |
-
-The tiers communicate through shared contracts rather than depending directly on each other's implementation.
-
-## Why the implementation is private
-
-AICore is being developed as **proprietary technology**. This public repository exists to document the project's purpose, architecture, engineering status, and development direction without distributing the core source code, private models, platform-control implementation, internal test infrastructure, or proprietary technical assets.
-
-This is a **technical showcase repository**, not the AICore source repository.
-
-## Documentation
-
-- [Project Overview](docs/OVERVIEW.md)
-- [Public Architecture](docs/ARCHITECTURE.md)
-- [Capabilities](docs/CAPABILITIES.md)
-- [Current Status &amp; Evidence Boundary](docs/CURRENT_STATUS.md)
-- [Safety &amp; Control Principles](docs/SAFETY_AND_CONTROL.md)
-- [Roadmap](docs/ROADMAP.md)
-- [Technical FAQ](docs/FAQ.md)
-
-## Feedback
-
-Technical feedback is especially welcome from people working in:
-
-- operating systems
-- performance engineering
-- heterogeneous computing
-- AI PCs
-- power and thermal management
-- GPU / NPU runtimes
-- local AI infrastructure
-- systems programming
-
-For technical/partnership/licensing inquiries: **kenny98929974@gmail.com**
-
----
-
-**AICore is a private engineering prototype. Public documentation describes the project but does not grant access to or rights in the private implementation.**
+© 2026 AICore. All rights reserved.

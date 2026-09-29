@@ -1,45 +1,39 @@
-# Technical FAQ
+[English](FAQ.md) | [Chinese](FAQ.zh-CN.md)
 
-## Is AICore an operating system?
+# Frequently Asked Questions
 
-No. AICore depends on existing operating systems and platform interfaces. It is designed as an additional control/orchestration layer.
+## What is AICore?
 
-## Is AICore a PC optimizer?
+AICore is an AI computer control layer designed to create a more adaptive, context-aware, and coherent personal-computing experience.
 
-Not in the traditional sense. Its architecture is centered on context, task intent, policy, validation, execution, readback, and feedback rather than a collection of fixed "boost" settings.
+## Who is AICore for?
 
-## Is AICore an AI agent with administrator access?
+The primary commercial audiences are AI PC manufacturers, OEMs, enterprise technology providers, silicon companies, software partners, strategic investors, and acquirers.
 
-No. AI output is advisory. Privileged actions remain behind deterministic contracts, policy validation, capability checks, and execution boundaries.
+## What problem does it solve?
 
-## Does AICore already control every CPU, GPU, and NPU?
+AICore addresses the fragmented experience created by diverse computing resources, changing workloads, separate vendor utilities, and fixed device modes.
 
-No. CPU/process and power-control paths are further along. GPU support is capability/vendor dependent and partial. NPU actuation remains incomplete.
+## How is AICore different from a conventional PC utility?
 
-## Does AICore improve performance?
+Conventional utilities usually focus on a narrow device, setting, or workload. AICore presents a broader product proposition centered on context, whole-device coordination, and adaptive intelligence.
 
-That has not yet been established through a public cross-hardware benchmark dataset. The project currently makes no numerical performance, energy, thermal, or battery-life claims.
+## How does AICore fit the AI PC market?
 
-## Why use AI at all?
+AICore gives AI PC investments a unifying product layer that can translate device complexity into a clear customer experience and differentiated commercial offering.
 
-AI/prediction can help interpret workload context, user/application intent, or prepare policy proposals. AICore is designed so the control system can still operate through deterministic mechanisms when AI is unavailable.
+## What can a buyer acquire?
 
-## Does AICore require applications to integrate an SDK?
+A commercial transaction can include the AICore product, brand, software intellectual property, product materials, and associated rights according to negotiated terms.
 
-No. L0 is intended for transparent compatibility. L1 and L2 allow applications to provide richer task intent when desired.
+## Which commercial models are suitable?
 
-## Does L2 replace the OS scheduler?
+AICore can support full acquisition, technology licensing, OEM bundling, enterprise offerings, joint development, and strategic investment.
 
-No. L2 is an AICore-native task integration layer, not a claim that AICore replaces the Windows or Linux kernel scheduler.
+## Can AICore support different markets?
 
-## Is the source code open source?
+Yes. The product proposition can extend across consumer AI PCs, professional workstations, enterprise devices, creator systems, and specialized computing portfolios.
 
-No. The core AICore implementation is proprietary and private. This repository publishes project-level technical documentation only.
+## How can interested parties begin a discussion?
 
-## Why publish the architecture if the source is private?
-
-The goal is to make the technical direction understandable, invite serious systems feedback, and document the engineering project without distributing the proprietary implementation.
-
-## Can I evaluate or discuss AICore privately?
-
-For technical/partnership/licensing inquiries: **kenny98929974@gmail.com**
+Contact **kenny98929974@gmail.com** for a confidential acquisition, licensing, investment, or partnership conversation.

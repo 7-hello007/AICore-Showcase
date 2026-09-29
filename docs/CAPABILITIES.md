@@ -1,87 +1,35 @@
-# Capabilities
+[English](CAPABILITIES.md) | [Chinese](CAPABILITIES.zh-CN.md)
 
-The table below distinguishes **implemented engineering areas** from **product claims**. AICore V4 is a private prototype; hardware behavior varies by platform and capability.
+# Value Capabilities
 
-| Area | V4 engineering status | Important boundary |
-|---|---|---|
-| System telemetry | Implemented | Coverage depends on OS/hardware |
-| Workload/context representation | Implemented | Recognition quality is not presented as a public benchmark |
-| Policy generation/resolution | Implemented | Policy generation does not guarantee platform support |
-| Policy validation | Implemented | Required before supported actuation |
-| Process priority | Native control path exists | Platform/permission dependent |
-| CPU affinity | Native control path exists | Platform/permission dependent |
-| Power profile | Native platform path exists | OS/capability dependent |
-| Background throttling | Implemented through supported policy/control mechanisms | Not a claim of arbitrary hard CPU quota enforcement |
-| GPU telemetry | Implemented for supported/vendor-dependent paths | Not universal |
-| GPU control | Partial / capability-gated | No universal cross-vendor actuation claim |
-| NPU capability/routing | Architecture implemented | Real NPU actuation remains incomplete |
-| AI-assisted policy proposal | Implemented | AI is advisory, not privileged authority |
-| Local LLM intent interpretation | Implemented optional path | Converts intent into validated semantic proposal; not direct actuation |
-| Task contracts | Implemented | Application integration mechanism |
-| L0/L1/L2 tiers | Implemented architecture | L2 is not a claim of kernel scheduler replacement |
-| Execution readback | Implemented | Depends on available platform/provider readback |
-| Rollback / SafeMode | Implemented architecture and tested paths | Hardware-specific certification remains separate |
-| Memory/history | Implemented | Effectiveness learning is not yet supported by a public prospective dataset |
-| Plugin framework | Implemented | Production hardware plugins/readback require separate validation |
-| Local IPC | Implemented | Security certification remains environment-specific |
-| Dashboard / CLI | Implemented | Primarily engineering/observability surfaces |
-| Model mode | Implemented | Does not perform or prove native hardware actuation |
-| Simulated platform | Implemented | In-memory/captured-fixture evidence only |
+## Contextual intelligence
 
-## Native control vs. model/simulation
+AICore is designed to understand that the right computer experience depends on the user, task, application, and moment. This creates a foundation for personalization and adaptive behavior.
 
-AICore deliberately maintains separate evidence categories.
+## Whole-device experience
 
-### Model mode
+The product brings diverse computing resources into one customer-facing proposition. Buyers can use this capability to create a more coherent experience across different device classes.
 
-Used to exercise policy/model paths without treating the result as real hardware control.
+## Workload awareness
 
-### Simulated-platform mode
+AICore supports product experiences that recognize the differing priorities of productivity, communication, creation, entertainment, and local AI workloads.
 
-Uses captured platform fixtures and in-memory state to exercise control-loop behavior, readback, rollback, and failure paths without writing to the host.
+## Adaptive coordination
 
-### Platform mode
+The product provides a strategic basis for balancing responsiveness, efficiency, user preference, and device characteristics as conditions change.
 
-Uses platform adapters and may reach real operating-system resource controls. This mode requires target-machine review and authorization.
+## Personalization
 
-A successful model or simulated execution must never be reported as a native hardware performance result.
+AICore can support experiences that become more relevant to individual or organizational patterns while maintaining clear control and trust principles.
 
-## AI role
+## Ecosystem extensibility
 
-AICore can use AI/prediction for:
+The product can form the center of partnerships spanning device manufacturers, enterprises, software providers, and silicon companies.
 
-- workload or intent interpretation;
-- policy proposal;
-- prediction/preparation.
+## Portfolio consistency
 
-AI does not receive an unrestricted route to privileged system APIs.
+AICore gives a commercial owner a reusable product identity that can extend across multiple devices, price points, and market segments.
 
-```text
-AI / Prediction
-      ↓
-Proposal
-      ↓
-Policy
-      ↓
-Validation
-      ↓
-Capability binding
-      ↓
-Execution
-      ↓
-Readback
-```
+## Business enablement
 
-## Current evidence gap
-
-AICore does not yet publish statistically credible cross-hardware evidence for:
-
-- performance uplift;
-- latency reduction;
-- energy reduction;
-- battery-life improvement;
-- thermal improvement;
-- gaming FPS improvement;
-- AI inference acceleration.
-
-Those are future measurement targets, not current claims.
+These capabilities support several forms of value creation, including premium device differentiation, enterprise services, technology licensing, strategic partnerships, and full product acquisition.
